@@ -33,6 +33,7 @@ jobs:
 
       - name: Init new repo in dist folder and commit generated files
         run: |
+          git config --global --add safe.directory /github/workspace/dist
           cd dist
           cp ../CNAME CNAME
           git init
